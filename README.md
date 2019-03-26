@@ -1,2 +1,5 @@
 # React-NodeJS
-Project is fullstack - Front-end: React Js - Backend - Nodejs 
+Project is fullstack:
+  - Font-End: ReactJS
+  - Backend: NodeJS
+
