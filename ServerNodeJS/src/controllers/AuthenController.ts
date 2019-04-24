@@ -32,7 +32,7 @@ export class AuthenController {
         let token: string = jwt.sign(payload, Config.KEY, {
           expiresIn: 1440
         })
-        let result: Login = new Login(200, 'Login successfull', token);
+        let result: Login = new Login(200, 'Login successfull', token, obj);
         let response: ResponseData = new ResponseData();
         response.setSuccess('Success');
         response.body = result;

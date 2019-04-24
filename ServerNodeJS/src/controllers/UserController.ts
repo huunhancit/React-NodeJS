@@ -55,7 +55,6 @@ export class UserController {
   }
 
   public queryUser(req: Request, res: Response) {
-    let result: Result = new Result();
     User.find({}, (err, users) => {
       if (err) {
         let result: Result = new Result();

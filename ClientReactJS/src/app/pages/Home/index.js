@@ -5,16 +5,8 @@ import { User, Chat } from 'app/pages'
 import { Route, Switch } from 'react-router-dom'
 
 
-class Home extends React.Component {
-  state = {
-    userSelected: 0
-  }
-  users = [
-    'Nhan Dinh',
-    'Truong Le',
-    'Bang Hoang'
-  ]
-
+class Home extends React.PureComponent {
+  
   sendMessage = (msg) => {
     console.log(msg)
   }

@@ -45,6 +45,21 @@ export default function base(state = {}, action) {
         }
       }
 
+    case ActionTypes.USER_NEW_MESSAGE: {
+      let users = [...state.users];
+      users.forEach((item) => {
+        if (item._id === action.user._id) {
+          item.isNew = action.isNew;
+        }
+      })
+      return {
+        ...state,
+        type: action.type,
+        message: '',
+        users
+      }
+    }
+
     default:
       return state;
   }

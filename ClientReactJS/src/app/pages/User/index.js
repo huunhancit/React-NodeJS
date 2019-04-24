@@ -10,7 +10,7 @@ import Modal from 'react-responsive-modal'
 import { Input, Password, Button } from 'components'
 import { ToastsContainer, ToastsStore } from 'react-toasts'
 
-class User extends React.Component {
+class User extends React.PureComponent {
   state = {
     isShowModal: false,
     username: '',
@@ -137,22 +137,22 @@ class User extends React.Component {
             <div style={styles.bodyModal}>
               <div className="form-group">
                 <label>Email address</label>
-                <Input style={"form-control"} value={email} onChange={(email) => this.setState({ email })} cusStyle={styles.input} placeholder="Enter email..." />
+                <Input className={"form-control"} value={email} onChange={(email) => this.setState({ email })} cusStyle={styles.input} placeholder="Enter email..." />
               </div>
               {
                 !isUpdate &&
                 <div>
                   <div className="form-group">
                     <label>Username</label>
-                    <Input style={"form-control"} value={username} onChange={(username) => this.setState({ username })} cusStyle={styles.input} placeholder="Enter username..." />
+                    <Input className={"form-control"} value={username} onChange={(username) => this.setState({ username })} cusStyle={styles.input} placeholder="Enter username..." />
                   </div>
                   <div className="form-group">
                     <label>Password</label>
-                    <Password style={"form-control"} value={password} onChange={(password) => this.setState({ password })} cusStyle={styles.input} placeholder="Enter password..." />
+                    <Password className={"form-control"} value={password} onChange={(password) => this.setState({ password })} cusStyle={styles.input} placeholder="Enter password..." />
                   </div>
                 </div>
               }
-              <Button type={"button"} style={"btn btn-primary float-right"} onClick={() => this.save()} name="   Save   " loading={type === ActionTypes.UPDATE_MAIL_PENDING || type === ActionTypes.ADD_USER_PENDING} />
+              <Button type={"button"} className={"btn btn-primary float-right"} onClick={this.save} name="   Save   " loading={type === ActionTypes.UPDATE_MAIL_PENDING || type === ActionTypes.ADD_USER_PENDING} />
             </div>
           </div>
         </Modal>

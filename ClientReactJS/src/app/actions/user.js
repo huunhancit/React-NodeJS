@@ -53,3 +53,8 @@ export const deleteUser = (id) => {
       })
   }
 }
+
+export const newMessage = (user, isNew) => {
+  console.log(user);
+  return { type: ActionTypes.USER_NEW_MESSAGE, user, isNew }
+}

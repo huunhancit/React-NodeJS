@@ -5,6 +5,7 @@ import Users from './Users'
 import InputChat from './InputChat'
 import Password from './Password'
 import Button from './Button'
+import MessageBox from './MessageBox'
 
 export {
   Input,
@@ -12,5 +13,6 @@ export {
   Users,
   InputChat, 
   Password,
-  Button
+  Button,
+  MessageBox
 }
