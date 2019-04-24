@@ -1,4 +1,4 @@
 
 export default {
-    DOMAIN_API: 'http://192.168.76.30:3000'
+    DOMAIN_API: 'http://localhost:3000'
 }
